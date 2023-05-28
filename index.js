@@ -15,7 +15,7 @@ app.get("/books", (req,res) => {
     }) 
 })
 
-app.post("/books", (req,res) => {
+app.post("/getbooks", (req,res) => {
     const q =  "INSERT INTO books (`title`, `desc`, `cover`) VALUES (?,?,?)"
     const values = ["test Tiltle", "test desc", "test cover"]
 
