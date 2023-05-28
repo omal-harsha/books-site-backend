@@ -16,7 +16,7 @@ app.get("/books", (req,res) => {
 })
 
 app.post("/books", (req,res) => {
-    const q =  "INSERT INTO books (`title`, `desc`, `cover`) VALUES (?)"
+    const q =  "INSERT INTO books (`title`, `desc`, `cover`) VALUES (?,?,?)"
     const values = ["test Tiltle", "test desc", "test cover"]
 
     db.query(q,values, (err,data) => {
