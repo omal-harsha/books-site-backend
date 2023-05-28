@@ -15,6 +15,16 @@ app.get("/books", (req,res) => {
     }) 
 })
 
+app.post("/books", (req,res) => {
+    const q =  "INSERT INTO eroku_dc874a98c6a2a49 (`title`, `desc`, `cover`) VALUES (?)"
+    const values = ["test Tiltle", "test desc", "test cover"]
+
+    db.query(q,values, (err,data) => {
+        if(err) return res.json(err)
+        return res.json("book has been created successfully")
+    })
+})
+
 app.listen(process.env.PORT || 8800, () => {
     console.log("Connected to backend")
 })
