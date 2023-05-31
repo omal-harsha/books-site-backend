@@ -17,7 +17,7 @@ app.get("/books", (req,res) => {
         return res.json(data)
     }) 
 })
-
+/*
 app.get("/getbook/:id",(req,res) => {
     const bookId =  req.params.id
     const q =  "SELECT * FROM books WHERE id = ?"
@@ -70,7 +70,7 @@ app.post("/createbooks", (req,res) => {
         return res.json("book has been created successfully")
     })
 })
-
+*/
 app.listen(process.env.PORT || 8800, () => {
     console.log("Connected to backend")
 })
