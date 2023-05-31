@@ -7,7 +7,7 @@ app.use(express.json());
 app.get("/", (req,res) => {
     res.json("hello this is the backend")
 })
-/*
+
 app.get("/books", (req,res) => {
     const q = "SELECT * FROM books";
     db.query(q, (err,data) => {
@@ -15,7 +15,7 @@ app.get("/books", (req,res) => {
         return res.json(data)
     }) 
 })
-
+/*
 app.post("/createbooks", (req,res) => {
     const q =  "INSERT INTO books (`title`, `desc`, `cover`) VALUES (?)"
     const values = [
