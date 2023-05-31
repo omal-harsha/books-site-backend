@@ -17,7 +17,7 @@ app.get("/books", (req,res) => {
 })
 
 app.post("/createbooks", (req,res) => {
-    const q =  "INSERT INTO books (`title`, `desc`, `cover`,`price`) VALUES (?,?,?,?)"
+    const q =  "INSERT INTO books (`title`, `desc`, `cover`,`price`) VALUES (?)"
     const values = [
         req.body.title,
         req.body.desc,
@@ -29,7 +29,7 @@ app.post("/createbooks", (req,res) => {
         if(err) return res.json(err)
         return res.json("book has been created successfully")
     })
-})*/
+})
 
 app.listen(process.env.PORT || 8800, () => {
     console.log("Connected to backend")
