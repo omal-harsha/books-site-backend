@@ -1,5 +1,5 @@
 import express from "express"
-import {db} from "./database.js"
+//import {db} from "./database.js"
 import cors from 'cors'
 
 const app = express()
@@ -9,7 +9,7 @@ app.use(cors())
 app.get("/", (req,res) => {
     res.json("hello this is the backend")
 })
-
+/*
 app.get("/books", (req,res) => {
     const q = "SELECT * FROM books";
     db.query(q, (err,data) => {
@@ -17,7 +17,7 @@ app.get("/books", (req,res) => {
         return res.json(data)
     }) 
 })
-/*
+
 app.get("/getbook/:id",(req,res) => {
     const bookId =  req.params.id
     const q =  "SELECT * FROM books WHERE id = ?"
