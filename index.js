@@ -15,13 +15,14 @@ app.get("/books", (req,res) => {
         return res.json(data)
     }) 
 })
-/*
+
 app.post("/createbooks", (req,res) => {
-    const q =  "INSERT INTO books (`title`, `desc`, `cover`) VALUES (?)"
+    const q =  "INSERT INTO books (`title`, `desc`, `cover`,`price`) VALUES (?)"
     const values = [
         req.body.title,
         req.body.desc,
         req.body.cover,
+        req.body.price
     ]
 
     db.query(q,[values], (err,data) => {
